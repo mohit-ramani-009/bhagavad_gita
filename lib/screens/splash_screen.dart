@@ -46,7 +46,7 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
     return Scaffold(
       body: Stack(
         children: [
-          // Background Image
+      
           Container(
             decoration: const BoxDecoration(
               image: DecorationImage(
@@ -55,14 +55,14 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
               ),
             ),
           ),
-          // Blur Effect
+        
           BackdropFilter(
             filter: ImageFilter.blur(sigmaX: 5.0, sigmaY: 5.0),
             child: Container(
               color: Colors.black.withOpacity(0.3),
             ),
           ),
-          // Foreground Content
+        
           FadeTransition(
             opacity: _fadeInAnimation,
             child: Center(
