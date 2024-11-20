@@ -60,7 +60,6 @@ class _DetailScreenState extends State<DetailScreen> {
       ),
       body: Stack(
         children: [
-          // Background with Blur Effect
           Container(
             decoration: const BoxDecoration(
               image: DecorationImage(
@@ -81,13 +80,12 @@ class _DetailScreenState extends State<DetailScreen> {
               ),
             ),
           ),
-          // Main Content
+      
           SingleChildScrollView(
             padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 24.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                // Chapter Image
                 Container(
                   height: 200,
                   width: double.infinity,
@@ -107,7 +105,7 @@ class _DetailScreenState extends State<DetailScreen> {
                   ),
                 ),
                 const SizedBox(height: 24),
-                // Chapter Title
+           
                 Text(
                   chapter['title']?[selectedLanguage] ?? 'No Title Available',
                   style: const TextStyle(
@@ -118,7 +116,7 @@ class _DetailScreenState extends State<DetailScreen> {
                   textAlign: TextAlign.center,
                 ),
                 const SizedBox(height: 16),
-                // Description Section
+            
                 Container(
                   padding: const EdgeInsets.all(16),
                   decoration: BoxDecoration(
