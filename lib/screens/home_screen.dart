@@ -27,7 +27,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Future<void> loadJsonData() async {
     try {
       final jsonString = await rootBundle.loadString("assets/json/bhagavad_gita.json");
-      await Future.delayed(const Duration(seconds: 2)); // Simulated loading delay
+      await Future.delayed(const Duration(seconds: 2)); 
       decodedJson = jsonDecode(jsonString);
     } catch (e) {
       print("Error loading JSON: $e");
@@ -61,7 +61,7 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       body: Stack(
         children: [
-          // Background Image with Overlay
+        
           Container(
             decoration: const BoxDecoration(
               image: DecorationImage(
@@ -70,15 +70,15 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
             child: BackdropFilter(
-              filter: ImageFilter.blur(sigmaX: 3.0, sigmaY: 3.0), // Adjust sigmaX and sigmaY for more/less blur
+              filter: ImageFilter.blur(sigmaX: 3.0, sigmaY: 3.0),
               child: Container(
                 decoration: BoxDecoration(
-                  color: Colors.black.withOpacity(0.3), // Add a semi-transparent overlay
+                  color: Colors.black.withOpacity(0.3),
                 ),
               ),
             ),
           ),
-          // Content
+        
           isLoading
               ? Center(
             child: Column(
@@ -101,7 +101,7 @@ class _HomeScreenState extends State<HomeScreen> {
           )
               : Column(
             children: [
-              // Language Dropdown
+           
               Padding(
                 padding: const EdgeInsets.all(16.0),
                 child: Container(
@@ -138,7 +138,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
               ),
-              // CarouselSlider
+             
               CarouselSlider(
                 options: CarouselOptions(
                   height: 230.0,
@@ -178,7 +178,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   );
                 }).toList(),
               ),
-              // List of Chapters
+           
               Expanded(
                 child: ListView.builder(
                   padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 8),
